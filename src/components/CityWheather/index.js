@@ -1,13 +1,22 @@
 import React from "react";
 import { Form, Button, Container } from "react-bootstrap";
 
-const cityWheather = ({ city , cityWheather}) =>{
-    const [error,setError] = React.useState("");
+const cityWheather = ({ flag , cityWheather}) =>{
+    //const [error,setError] = React.useState("");
    //
-   return(
-       <p className="text-danger"></p>
-    );
-};
+   
+    //<h1>`Hello, ${cityWheather.main.temp}`</h1>
+
+        return (
+            <>
+                
+                <h1>Hello {cityWheather}</h1>
+            </>
+        );
+    
+
+
+}
 
 
 export default cityWheather; 
