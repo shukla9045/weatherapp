@@ -11,8 +11,9 @@ const CityInput = ({ city , setCity , fetchCityWheather, setFlag }) => {
     };
     //console.log("cityis", city);
     const handleClick = () =>  {
-       if(!city){
+       if(!city || !city.trim()){
         setError("City Field is Empty");  
+        setFlag(false);
        }
        else{
        setFlag(true);
@@ -29,7 +30,7 @@ const CityInput = ({ city , setCity , fetchCityWheather, setFlag }) => {
         <Container>
             <Form>
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Label>City</Form.Label>
+                    <Form.Label >City</Form.Label>
                     <Form.Control 
                         type="text" 
                         value = {city}

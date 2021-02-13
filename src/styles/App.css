@@ -1,12 +1,19 @@
 h1 {
-    color: #27aedb;
+    margin-top: 50px;
+    color: #1f6abe;
     text-align: center;
+    margin: 10px;
+  
     }
-    
 
+form{
+    color: #010d11;
+    font-size: large;
+}
 button{
     color: #27aedb;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
+

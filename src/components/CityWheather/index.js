@@ -1,16 +1,36 @@
 import React from "react";
 import { Form, Button, Container } from "react-bootstrap";
 
-const cityWheather = ({ flag , cityWheather}) =>{
-    //const [error,setError] = React.useState("");
-   //
-   
-    //<h1>`Hello, ${cityWheather.main.temp}`</h1>
+const cityWheather = ({ flag ,description,temp,name,temp_min,temp_max,humidity,windspeed}) =>{
+       
+        const display =()=>{
+            if(flag)
+           { 
+                return(
+                    <>
+                        
+                        <h1>Name        :         {name}</h1>
+                        <h1>Temperature        :         {temp}</h1>
+                        <h1>Desciption        :         {description}</h1>
+                        <h1>Minimum temp        :         {temp_min}</h1>
+                        <h1>Miaximum temp        :         {temp_max}</h1>
+                        <h1>Humidity        :         {humidity}</h1>
+                        <h1>Wind Speed       :         {windspeed}</h1>
+
+                    </>
+                );
+            }
+            else
+            {
+                return "";
+            }
+        }
+
 
         return (
             <>
                 
-                <h1>Hello {cityWheather}</h1>
+                {display()}
             </>
         );
     
@@ -19,16 +39,6 @@ const cityWheather = ({ flag , cityWheather}) =>{
 }
 
 
-export default cityWheather; 
 
-  // {
-    //     <p"Result is result",result.main.temp);
-    //     console.log("Result is result",result.weather[0].description);
-        
-    //     console.log("Result is result",result.main.humidity);
-    //     console.log("Result is result",result.main.temp_min);
-    //     console.log("Result is result",result.main.temp_max);
-    //     console.log("Result is result",result.wind.speed);
-    //     console.log("Result is result",result.name);
-        
-    //     }
+
+export default cityWheather; 
