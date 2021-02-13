@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Button, Container } from "react-bootstrap";
 
 
-const CityInput = ({ city , setCity , fetchCityWheather, setFlag }) => {
+const CityInput = ({ city , setCity , fetchCityWeather, setFlag }) => {
     //const [city, setCity] = React.useState("");
     const [error,setError] = React.useState("");
     const handleInputChange = (event) => {
@@ -18,8 +18,8 @@ const CityInput = ({ city , setCity , fetchCityWheather, setFlag }) => {
        else{
        setFlag(true);
        //api call
-       fetchCityWheather();
-       //const tempr = cityWheather.main.temp ;
+       fetchCityWeather();
+       //const tempr = cityWeather.main.temp ;
        setError("");
       // console.log(temp);
        }

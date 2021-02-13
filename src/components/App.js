@@ -1,10 +1,10 @@
 //import React, {Component, useState} from "react";
 //import CityInput from "./components/CityInput";
-//import CityWheather from "./components/CityWheather";
+//import CityWeather from "./components/CityWeather";
 import '../styles/App.css';
 import React from "react";
 import CityInput from "./CityInput";
-import CityWheather from "./CityWheather";
+import CityWeather from "./CityWeather";
 
 const App = () => {
   const [city,setCity] = React.useState("");
@@ -17,7 +17,7 @@ const App = () => {
   const [temp_max,setTemp_max] = React.useState("");
   const [windspeed,setWindspeed] = React.useState("");
   const [name,setName] = React.useState("");
-  const fetchCityWheather = () =>{
+  const fetchCityWeather = () =>{
     fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4c496af33d732297c30b641b3b235e47`
     ).then((response)=>response.json()).then((result) =>{
@@ -37,20 +37,21 @@ const App = () => {
   };
 
   // .then((result)=>{
-  //   setCityWheather(result);
+  //   setCityWeather(result);
   //    //return (result.main.temp);
-  //   //setCityWheather(result.main.temp);
+  //   //setCityWeather(result.main.temp);
   //    //console.log(result.main.temp);
-  //      console.log(cityWheather.main);
+  //      console.log(CityWeather.main);
   //  }
-   //console.log(cityWheather);
+   //console.log(CityWeather);
   
   
  return(
   <>
-   <CityInput city={city} setCity={setCity} fetchCityWheather = {fetchCityWheather} setFlag = {setFlag}/>
+  
+   <CityInput city={city} setCity={setCity} fetchCityWeather = {fetchCityWeather} setFlag = {setFlag}/>
    
-   <CityWheather flag = {flag}  windspeed = {windspeed}  name = {name} humidity = {humidity} description ={description} temp ={temp} temp_max = {temp_max} temp_min = {temp_min} /> 
+   <CityWeather flag = {flag}  windspeed = {windspeed}  name = {name} humidity = {humidity} description ={description} temp ={temp} temp_max = {temp_max} temp_min = {temp_min} /> 
   
 
    
