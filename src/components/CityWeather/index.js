@@ -16,7 +16,7 @@ const cityWheather = ({
       return (
         <>
           <h1>Name : {name}</h1>
-          <h1>Temperature : {temp}</h1>
+          <h1>Temperature(in K) : {temp}</h1>
           <h1>Description : {description}</h1>
           <h1>Minimum temp : {temp_min}</h1>
           <h1>Miaximum temp : {temp_max}</h1>
